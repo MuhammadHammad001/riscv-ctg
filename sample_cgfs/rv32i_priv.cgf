@@ -155,4 +155,763 @@ misalign-beq:
   val_comb:
     ' rs1_val==rs2_val and ea_align == 2': 0
 
+# -----------------------------------------------------------------------------------------------------------------
+#PMP Permission. Check csrrw. csrrs and csrrc in all 3 modes
+pmp_permission_csr_MMode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+pmp_permission_csr_SMode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+  csr_comb:
+    mstatus & 0x1800==0x800: 0  #Check MPP bits == Supervisor mode
+pmp_permission_csr_UMode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+  csr_comb:
+    mstatus & 0x1800 == 0x000: 0  #Check MPP bits == User mode
+#----------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------
+#PMP Mode Switch Test
+pmp_mode_switch_SMode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    mstatus & 0x1800==0x800: 0  #Check MPP bits == Supervisor mode
+pmp_mode_switch_UMode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    mstatus & 0x1800 == 0x000: 0  #Check MPP bits == User mode
+#----------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------
+# -Write all 1 to pmpcfg via csrrw, read it
+# -Then write all 0 to pmpcfg by doing csrrc (rs1 is all ones), read
+# -Then write all 1 to pmpcfg by doing csrrs (rs1 is all ones), read
+pmp_cfg_all_ones:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+  csr_comb:
+    pmpcfg0 == 0x9F9F9F9F: 0 #Reserved bits will not be written -- once written all the bits of cfg will be locked and will return the same.
+    pmpcgf0 != 0xFFFFFFFF: 0 #Try to write the pmpcfg0 with using csrrs -- will be unsucessful, if successful this coverpoint will miss
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# "Write to pmpcfg with L=1 and check that:
+# - Writes are ignored
+# - Writes to other, unrelated entries in the same CSR are not ignored"
+pmp_cfg_locked_write_unrelated:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+  csr_comb:
+    pmpcfg0         & 0xFF == 0x9F: 0          #Lock bit set
+    pmpcfg0         & 0xFF != 0x12: 0          #Lock bit set  --any dummy write ignored
+    (pmpcfg0 >> 8)  & 0xFF == 0x17: 0          #Write to the other pmpcfg0 -- okay    
+# - Writes to adjacent entries in TOR mode are also ignored
+# - Hint: Set the pmp permissions for pmpaddr1 and pmpadd0, then check whether you are able to change the address by using the following dummy addresses
+# - Set TOR for pmpaddr1 
+pmp_cfg_locked_write_TOR_adj:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 8)  & 0xFF == 0x8F: 0          
+    pmpaddr0               != 0x81234567: 0    #any dummy write to pmpaddr[G-1], pmpaddr[0] in this case ignored
+    (pmpcfg0 >> 8)  & 0xFF != 0x12 : 0          ##Lock bit set  --any dummy write ignored
 
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#Following 4 coverpoints test that whether the test is set with the required pmp permission.
+#Region 1
+pmp_cfg_disabled_R1:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18) == 0x00: 0
+pmp_cfg_tor_check_R1:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18) == 0x08: 0
+pmp_cfg_na4_check_R1:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18) == 0x10: 0
+pmp_cfg_napot_check_R1:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18) == 0x18: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#Region 2
+pmp_cfg_disabled_R2:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 8) & 0x18 == 0x00: 0
+pmp_cfg_tor_check_R2:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 8) & 0x18 == 0x08: 0
+pmp_cfg_na4_check_R2:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 8) & 0x18 == 0x10: 0
+pmp_cfg_napot_check_R2:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 8) & 0x18 == 0x18: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#Region 3
+pmp_cfg_disabled_R3:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 16) & 0x18 == 0x00: 0
+pmp_cfg_tor_check_R3:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 16) & 0x18 == 0x08: 0
+pmp_cfg_na4_check_R3:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 16) & 0x18 == 0x10: 0
+pmp_cfg_napot_check_R3:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 16) & 0x18 == 0x18: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#Region 4
+pmp_cfg_disabled_R4:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 24) & 0x18 == 0x00: 0
+pmp_cfg_tor_check_R4:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 24) & 0x18 == 0x08: 0
+pmp_cfg_na4_check_R4:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 24) & 0x18 == 0x10: 0
+pmp_cfg_napot_check_R4:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 >> 24) & 0x18 == 0x18: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+                                          # LOCK BIT SET && MACHINE MODE
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------------------------------------------------
+#                                                 X - Tests
+#---------------------------------------------------------------------------------------------------------------------- 
+# Foreach mode, perform instruction fetches to an address where the associated pmpcfg.X=0/1 and
+# observe an access fault or not.
+#1. Instruction Fetch with DISABLED PMP - X Enabled
+pmp_cfg_disabled_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x87: 0
+#2. Instruction Fetch with TOR PMP - X Enabled
+pmp_cfg_TOR_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x8F: 0
+#3. Instruction Fetch with NA4 PMP - X Enabled
+pmp_cfg_NA4_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x97: 0
+#4. Instruction Fetch with NAPOT PMP - X Enabled
+pmp_cfg_NAPOT_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x9F: 0
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Instruction Fetch with DISABLED PMP - X Disabled
+pmp_cfg_disabled_NO_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x83: 0
+#2. Instruction Fetch with TOR PMP - X Disabled
+pmp_cfg_TOR_NO_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x8B: 0
+#3. Instruction Fetch with NA4 PMP - X Disabled
+pmp_cfg_NA4_NO_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x93: 0
+#4. Instruction Fetch with NAPOT PMP - X Disabled
+pmp_cfg_NAPOT_NO_X_instruction_fetch:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x9B: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# Do the same for loads and stores and AMOs where pmpcfg.X!=pmpcfg.W and X!=R
+# to make sure that the X bit only affects instruction fetches.
+# Hint: Make the X == 0 and the W & R == 1, so load and store should be successful | No exception (except in diabled region)
+#---------------------------------------------------------------------------------------------------------------------- 
+                                      # Load on address with No X Permission
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Load Word with DISABLED PMP - X Disabled
+pmp_cfg_disabled_NO_X_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x83: 0    #No address matching
+#2. Load Word with TOR PMP - X Disabled
+pmp_cfg_TOR_NO_X_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8B and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Load Word with NA4 PMP - X Disabled
+pmp_cfg_NA4_NO_X_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x93 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Load Word with NAPOT PMP - X Disabled
+pmp_cfg_NAPOT_NO_X_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9B and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#---------------------------------------------------------------------------------------------------------------------- 
+                                      # Store on address with No X Permission
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Store Word with DISABLED PMP - X Disabled
+pmp_cfg_disabled_NO_X_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x83: 0    #No address matching
+#2. Store Word with TOR PMP - X Disabled
+pmp_cfg_TOR_NO_X_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8B and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Store Word with NA4 PMP - X Disabled
+pmp_cfg_NA4_NO_X_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x93 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Store Word with NAPOT PMP - X Disabled
+pmp_cfg_NAPOT_NO_X_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9B and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# Also, perform instruction fetches of 32b instructions that straddle a boundary where each half is accessible 
+# but the other half gets an access fault based on pmpcfg.X.
+# Perform accesses between a PMP region and non PMP region boundary.
+# Hint: Try to use a 64 bit instruction like the ld which will work only on the NA4 part and other will fail.
+pmp_cfg_NA4_one_region:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x97: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------------------------------------------------
+#                                                 W - Tests
+#---------------------------------------------------------------------------------------------------------------------- 
+# In M mode, foreach mode in MPP (including M), foreach store and AMO instruction, 
+# perform the instruction referencing an address where the associated pmpcfg.W=0/1 and observe an access fault or not.
+#1. Store Word with DISABLED PMP - W Enabled
+pmp_cfg_disabled_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x87: 0    #No address matching
+#2. Store Word with TOR PMP - W Enabled
+pmp_cfg_TOR_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8F and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Store Word with NA4 PMP - W Enabled
+pmp_cfg_NA4_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x97 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Store Word with NAPOT PMP - W Enabled
+pmp_cfg_NAPOT_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9F and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Store Word with DISABLED PMP - W Disabled
+pmp_cfg_disabled_NO_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x85: 0    #No address matching
+#2. Store Word with TOR PMP - W Disabled
+pmp_cfg_TOR_NO_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8D and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Store Word with NA4 PMP - W Disabled
+pmp_cfg_NA4_NO_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x95 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Store Word with NAPOT PMP - W Disabled
+pmp_cfg_NAPOT_NO_W_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9D and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# Do the same for loads where pmpcfg.R=1 and pmpcfg.W=0 to make sure that the W bit only affects stores and AMOs.
+# Hint: Make the W == 0 and the W & X == 1, so load and store should be successful | No exception (except in diabled region)
+#---------------------------------------------------------------------------------------------------------------------- 
+                                      # Load on address with No W Permission
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Load Word with DISABLED PMP - W Disabled
+pmp_cfg_disabled_NO_W_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x85: 0    #No address matching
+#2. Load Word with TOR PMP - W Disabled
+pmp_cfg_TOR_NO_W_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9D and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Load Word with NA4 PMP - W Disabled
+pmp_cfg_NA4_NO_W_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x95 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Load Word with NAPOT PMP - W Disabled
+pmp_cfg_NAPOT_NO_W_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9D and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------------------------------------------------
+#                                                 R - Tests
+#---------------------------------------------------------------------------------------------------------------------- 
+# In M mode, foreach mode in MPP (including M), foreach load and AMO instruction, 
+# perform the instruction referencing an address where the associated pmpcfg.R=0/1 and observe an access fault or not.
+#1. Load Word with DISABLED PMP - R Enabled
+pmp_cfg_disabled_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x87: 0    #No address matching
+#2. Load Word with TOR PMP - W Enabled
+pmp_cfg_TOR_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8F and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Load Word with NA4 PMP - W Enabled
+pmp_cfg_NA4_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x97 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Store Word with NAPOT PMP - W Enabled
+pmp_cfg_NAPOT_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9F and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Load Word with DISABLED PMP - R Disabled
+pmp_cfg_disabled_NO_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x86: 0    #No address matching
+#2. Load Word with TOR PMP - R Disabled
+pmp_cfg_TOR_NO_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8E and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Load Word with NA4 PMP - R Disabled
+pmp_cfg_NA4_NO_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x96 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Load Word with NAPOT PMP - R Disabled
+pmp_cfg_NAPOT_NO_R_load_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    lw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9E and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# Do the same for stores where pmpcfg.R=0 and pmpcfg.W=1 to make sure that the R bit only affects loads and AMOs.
+# Hint: Make the W == 0 and the W & X == 1, so load and store should be successful | No exception (except in diabled region)
+#---------------------------------------------------------------------------------------------------------------------- 
+                                      # Load on address with No W Permission
+#---------------------------------------------------------------------------------------------------------------------- 
+#1. Store Word with DISABLED PMP - R Disabled
+pmp_cfg_disabled_NO_R_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  csr_comb:
+    (pmpcfg0 & 0xFF) == 0x86: 0    #No address matching
+#2. Store Word with TOR PMP - R Disabled
+pmp_cfg_TOR_NO_R_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x8E and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#3. Store Word with NA4 PMP - R Disabled
+pmp_cfg_NA4_NO_R_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x96 and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#4. Store Word with NAPOT PMP - R Disabled
+pmp_cfg_NAPOT_NO_R_store_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9E and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# Check A bits by setting each mode (NAPOT, TOR and OFF).
+pmp_cfg_check_each_mode:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    pmpcfg0         & 0x18 == 0x00: 0  #OFF
+    (pmpcfg0 >> 8)  & 0x18 == 0x08: 0  #TOR
+    (pmpcfg0 >> 16) & 0x18 == 0x10: 0  #NA4
+    (pmpcfg0 >> 24) & 0x18 == 0x18: 0  #NAPOT
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+                                                      # pmpaddr tests
+#---------------------------------------------------------------------------------------------------------------------- 
+# "-Write all 1 to pmpaddr via csrrw, read it and store to the signature
+# -Then write all 0 to pmpaddr by doing csrrc (rs1 is all ones), read and store to the signature
+# -Then write all 1 to pmpaddr by doing csrrs (rs1 is all ones), read and store to the signature"
+#---------------------------------------------------------------------------------------------------------------------- 
+pmp_addr_all_ones:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    csrrs: 0
+    csrrc: 0
+  csr_comb:
+    pmpaddr0 == 0xFFFFFFFF: 0 #All ones to the pmmpaddr0 | csrrw, csrrs
+    pmpaddr0 == 0x00000000: 0 #csrrc
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# check if hardwired bits [6:5] are writeany values and reading this field gives only 0 value
+pmp_cfg_hardwire_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    pmpcfg0 & 0x60 == 0x00: 0 #Check that pmpcfg0 is equal to zero
+    pmpcfg0 & 0x60 != 0x60: 0 #Try to write the hardwired bits, if written then this coverpoint will miss
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# If PMP entry i is locked, writes to pmpicfg and pmpaddri are ignored
+pmp_locked_check_write:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    pmpcfg0 & 0x80 == 0x80: 0         #Check that pmpcfg0 locked bit is set
+    pmpcfg0 & 0xFF != 0x84: 0         #Try to write dummy value to the locked entry, if written not working correctly.
+    pmpadd0        != 0xFFFFFFFF: 0   #Try to write dummy value to the locked entry, if written, then not working correctly.
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# check if all addresses corresponding to entries are read/writable
+pmp_check_address:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x9F and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < ((((((pmpaddr0 << 2) | 3) + 1) | (((pmpaddr0 << 2) | 3))) + 1)))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# pmpaddri[G-1:0] bits must be read zero in case of pmpcfgi.A[1]==0 | (OFF or TOR)uneffecting the underlaying actual value for G>=1
+# Let's take the value of G == 2 for this case, 2-1 = G[1:0] bits must be zero.
+pmp_addr_bits_check_G:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18 == 0x00) or (pmpcfg0 & 0x18 == 0x01): 0
+    pmpaddr0 & 0x03 == 0x00: 0
+
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# pmpaddri[G-2:0] bits must be read all ones in case of pmpcfgi.A[1]==1 uneffecting the underlaying actual value for G>=2
+# Let's take the value of G == 3 for this case, 3-2 = G[1:0] bits must be zero.
+pmp_addr_bits_check_G_NAPOT:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+  csr_comb:
+    (pmpcfg0 & 0x18 == 0x18): 0
+    pmpaddr0 & 0x03 == 0x03: 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# If the L bit is clear and the privilege mode of the access is M, the access succeeds
+pmp_cfg_NA4_NO_lock_check:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    sw: 0
+  val_comb:
+    '(pmpcfg0 & 0xFF) == 0x1F and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val +imm_val < (pmpaddr0 << 2))': 0
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
+# The matching PMP entry must match all bytes of an access, or the access fails, irrespective of the L, R, W, and X bits.
+pmp_cfg_na4_check_double_word_priority:
+  config:
+    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+  mnemonics:
+    csrrw: 0
+    ld: 0
+  csr_comb:
+    (pmpcfg0 & 0x18) == 0x10: 0
+
+
+
+
+
+
+
+
+
+
+
+
+#----------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------- 
