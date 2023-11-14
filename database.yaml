@@ -1,0 +1,255 @@
+# database generated on 2023-11-14 16:42 GMT
+!!omap
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-R.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NA4_R
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RW.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NA4_RW
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RWX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NA4_RWX
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NA4_RX
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-X.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NA4_X
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-R.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NAPOT_R
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RW.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NAPOT_RW
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RWX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NAPOT_RWX
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NAPOT_RX
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-X.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_NAPOT_X
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-R.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_TOR_R
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-RX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_TOR_RX
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-X.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_TOR_X
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-cfg-access.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_access_permission
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-cfg-reg.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_cfg_locked_write_unrelated
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-tor-RW.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_TOR_RW
+- /home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-tor-RWX.S:
+    commit_id: '-'
+    isa:
+    - RV32I_Zicsr
+    parts: !!omap
+    - '1':
+        check:
+        - check ISA:=regex(.*32.*)
+        - check ISA:=regex(.*I.*Zicsr.*)
+        define:
+        - def rvtest_mtrap_routine=True
+        - def rvtest_strap_routine=True
+        - def TEST_CASE_1=True
+        coverage_labels:
+        - pmp_TOR_RWX
