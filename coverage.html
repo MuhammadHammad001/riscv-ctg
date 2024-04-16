@@ -253,7 +253,7 @@ function is_all_rows_hidden(value) {
 
 </script>
     <h1></h1>
-    <p>Report generated on 2023-11-14 16:42 GMT by <a href="https://pypi.python.org/pypi/riscof">riscof</a> v</p>
+    <p>Report generated on 2024-04-16 20:55 GMT by <a href="https://pypi.python.org/pypi/riscof">riscof</a> v</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -264,7 +264,7 @@ function is_all_rows_hidden(value) {
         <td>-</td></tr>
       <tr>
         <td>ISA</td>
-        <td>RV32IMCZicsr_Zifencei</td></tr>
+        <td>RV32IMACZicsr_Zifencei</td></tr>
       <tr>
         <td>User Spec Version</td>
         <td>2.3</td></tr>
@@ -286,13 +286,13 @@ function is_all_rows_hidden(value) {
             <td class="extra" colspan="1">
               <div class="log">hart_ids: [0]
 hart0:
-    ISA: RV32IMCZicsr_Zifencei
+    ISA: RV32IMACZicsr_Zifencei
     physical_addr_sz: 32
     User_Spec_Version: '2.3'
     supported_xlen:
       - 32
     misa:
-        reset-val: 0x40001104
+        reset-val: 0x40001105
         rv32:
             accessible: true
             mxl:
@@ -315,9 +315,10 @@ hart0:
                     warl:
                         dependency_fields: []
                         legal:
-                          - extensions[25:0] bitmask [0x0001104, 0x0000000]
+                          - extensions[25:0] bitmask [0x0001105, 0x0000000]
                         wr_illegal:
                           - Unchanged
+
 
                 description: Encodes the presence of the standard extensions, with
                     a single bit per letter of the alphabet.
@@ -4442,147 +4443,7 @@ zicbo_cache_block_sz:
         
         <tbody class= "  sizes-table-row" >
         <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-R.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NA4_R'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RW.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NA4_RW'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RWX.S</td>
-          <td class="col-tfprint">17878</td>          
-          <td class="col-tcode">792</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NA4_RWX'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-RX.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NA4_RX'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NA4-X.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NA4_X'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-R.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NAPOT_R'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RW.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NAPOT_RW'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RWX.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NAPOT_RWX'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-RX.S</td>
-          <td class="col-tfprint">18256</td>          
-          <td class="col-tcode">1128</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NAPOT_RX'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-NAPOT-X.S</td>
-          <td class="col-tfprint">17970</td>          
-          <td class="col-tcode">828</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_NAPOT_X'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-R.S</td>
-          <td class="col-tfprint">18016</td>          
-          <td class="col-tcode">892</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_TOR_R'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-RX.S</td>
-          <td class="col-tfprint">18016</td>          
-          <td class="col-tcode">892</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_TOR_RX'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-TOR-X.S</td>
-          <td class="col-tfprint">18016</td>          
-          <td class="col-tcode">892</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_TOR_X'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-cfg-access.S</td>
-          <td class="col-tfprint">17790</td>          
-          <td class="col-tcode">632</td>          
-          <td class="col-tdata">7184</td>          
-          <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_access_permission'}</td>          
-        </tr></tbody>
-        
-        <tbody class= "  sizes-table-row" >
-        <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-cfg-reg.S</td>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/PMP-CFG-reg.S</td>
           <td class="col-tfprint">17718</td>          
           <td class="col-tcode">576</td>          
           <td class="col-tdata">7184</td>          
@@ -4592,29 +4453,419 @@ zicbo_cache_block_sz:
         
         <tbody class= "  sizes-table-row" >
         <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-tor-RW.S</td>
-          <td class="col-tfprint">18016</td>          
-          <td class="col-tcode">892</td>          
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/PMP-CSR-access.S</td>
+          <td class="col-tfprint">17854</td>          
+          <td class="col-tcode">696</td>          
           <td class="col-tdata">7184</td>          
           <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_TOR_RW'}</td>          
+          <td class="col-tcov">{'PMP_access_permission'}</td>          
         </tr></tbody>
         
         <tbody class= "  sizes-table-row" >
         <tr>
-          <td class="col-tname">/home/hammad/PMP_Coverpoints/Finalized_Tests/pmp-tor-RWX.S</td>
-          <td class="col-tfprint">18016</td>          
-          <td class="col-tcode">892</td>          
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-R-priority-level-2.S</td>
+          <td class="col-tfprint">17980</td>          
+          <td class="col-tcode">836</td>          
           <td class="col-tdata">7184</td>          
           <td class="col-tsign">400</td>          
-          <td class="col-tcov">{'pmp_TOR_RWX'}</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_r_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-R-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-R.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RW-priority-level-2.S</td>
+          <td class="col-tfprint">17980</td>          
+          <td class="col-tcode">836</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_rw_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RW-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RW.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RWX.S</td>
+          <td class="col-tfprint">18042</td>          
+          <td class="col-tcode">884</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_rwx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RX-priority-level-2.S</td>
+          <td class="col-tfprint">17980</td>          
+          <td class="col-tcode">836</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_rx_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RX-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-RX.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-X-priority-level-2.S</td>
+          <td class="col-tfprint">17980</td>          
+          <td class="col-tcode">836</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_x_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-X-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_priority_x'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NA4-X.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NA4_x'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-R-priority-level-2.S</td>
+          <td class="col-tfprint">17968</td>          
+          <td class="col-tcode">848</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_r_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-R-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-R.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RW-priority-level-2.S</td>
+          <td class="col-tfprint">17968</td>          
+          <td class="col-tcode">848</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_rw_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RW-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RW.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RWX.S</td>
+          <td class="col-tfprint">18042</td>          
+          <td class="col-tcode">884</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_rwx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RX-priority-level-2.S</td>
+          <td class="col-tfprint">17968</td>          
+          <td class="col-tcode">848</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_rx_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RX-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-RX.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-X-priority-level-2.S</td>
+          <td class="col-tfprint">17968</td>          
+          <td class="col-tcode">848</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_x_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-X-priority.S</td>
+          <td class="col-tfprint">17820</td>          
+          <td class="col-tcode">720</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_priority_x'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-NAPOT-X.S</td>
+          <td class="col-tfprint">18046</td>          
+          <td class="col-tcode">880</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_NAPOT_x'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-R-priority-level-2.S</td>
+          <td class="col-tfprint">18030</td>          
+          <td class="col-tcode">900</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_r_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-R-priority.S</td>
+          <td class="col-tfprint">17882</td>          
+          <td class="col-tcode">772</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-R.S</td>
+          <td class="col-tfprint">18092</td>          
+          <td class="col-tcode">944</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_r'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RW-priority-level-2..S</td>
+          <td class="col-tfprint">18026</td>          
+          <td class="col-tcode">904</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_rw_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RW-priority.S</td>
+          <td class="col-tfprint">17882</td>          
+          <td class="col-tcode">772</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RW.S</td>
+          <td class="col-tfprint">18092</td>          
+          <td class="col-tcode">944</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_rw'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RWX-priority-level-2.S</td>
+          <td class="col-tfprint">18026</td>          
+          <td class="col-tcode">904</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_rwx_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RWX.S</td>
+          <td class="col-tfprint">18092</td>          
+          <td class="col-tcode">944</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_rwx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RX-priority-level-2.S</td>
+          <td class="col-tfprint">18026</td>          
+          <td class="col-tcode">904</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_rx_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RX-priority.S</td>
+          <td class="col-tfprint">17882</td>          
+          <td class="col-tcode">772</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-RX.S</td>
+          <td class="col-tfprint">18092</td>          
+          <td class="col-tcode">944</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_rx'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-X-priority-level-2.S</td>
+          <td class="col-tfprint">18026</td>          
+          <td class="col-tcode">904</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_x_level_2'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-X-priority.S</td>
+          <td class="col-tfprint">17882</td>          
+          <td class="col-tcode">772</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_priority_x'}</td>          
+        </tr></tbody>
+        
+        <tbody class= "  sizes-table-row" >
+        <tr>
+          <td class="col-tname">/home/hammad/Temp-for-pmp-track/Tests/pmp-TOR-X.S</td>
+          <td class="col-tfprint">18092</td>          
+          <td class="col-tcode">944</td>          
+          <td class="col-tdata">7184</td>          
+          <td class="col-tsign">400</td>          
+          <td class="col-tcov">{'PMP_TOR_x'}</td>          
         </tr></tbody>
         
       </table>
 
     </sizes-table-body>
     <results-table-body>
-    <h2>Coverage Report ( Total Coverpoints: 296 )</h2>
+    <h2>Coverage Report ( Total Coverpoints: 1106 )</h2>
     <table id="results-table">
       <thead id="results-table-head">
         <tr>
@@ -4626,8 +4877,8 @@ zicbo_cache_block_sz:
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_NA4_R</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NA4_priority_r</td>
+          <td class="col-result">25/25</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -4638,36 +4889,44 @@ zicbo_cache_block_sz:
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 70
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 3
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 19
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 98
-     ((pmpcfg0 >> 8) & 0x99) == 0x91: 81
-     ((pmpcfg0 >> 8) & 0x9A) == 0x90: 81
-     ((pmpcfg0 >> 8) & 0x9C) == 0x90: 81
-     (read_csr("mcause") != 0x00000005): 98
-     (read_csr("mcause") == 0x00000001): 3
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
+     ((pmpcfg0 >> 24) & 0x94) == (0x91 & 0x94): 35
+     ((pmpcfg0 >> 24) & 0x92) == (0x91 & 0x92): 35
+     ((pmpcfg0 >> 24) & 0x91) == (0x91 & 0x91): 35
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 36
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 36
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 36
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
 mnemonics:
      csrrs: 53
-     csrrw: 42
-     lw: 179
+     csrrw: 60
+     lw: 182
      sw: 103
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 8) & 0x9F == 0x91) and (rs1_val + imm_val == (pmpaddr1 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x91) and (rs1_val + imm_val == (pmpaddr3 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 392
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 25/25
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_NA4_RW</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NA4_priority_r_level_2</td>
+          <td class="col-result">30/30</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -4678,19 +4937,418 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 80
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 80
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 3
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 89
-     ((pmpcfg0 >> 8) & 0x99) == 0x91: 52
-     ((pmpcfg0 >> 8) & 0x9A) == 0x92: 52
-     ((pmpcfg0 >> 8) & 0x9C) == 0x90: 52
-     (read_csr("mcause") != 0x00000005): 89
-     (read_csr("mcause") != 0x00000007): 89
-     (read_csr("mcause") == 0x00000001): 3
-     coverage: 12/12
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 36
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 36
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 36
+     ((pmpcfg0 >> 8) & 0x94) == (0x91 & 0x94): 35
+     ((pmpcfg0 >> 8) & 0x92) == (0x91 & 0x92): 35
+     ((pmpcfg0 >> 8) & 0x91) == (0x91 & 0x91): 35
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 37
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 37
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 37
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 54
+     csrrw: 62
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x91) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 395
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_rw</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x94) == (0x93 & 0x94): 23
+     ((pmpcfg0 >> 24) & 0x92) == (0x93 & 0x92): 23
+     ((pmpcfg0 >> 24) & 0x91) == (0x93 & 0x91): 23
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 24
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 24
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 24
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 36
+     csrrw: 51
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x93) and (rs1_val + imm_val == (pmpaddr3 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 258
+     mode == 'M' and (mcause != 7): 258
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_rw_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 24
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 24
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 24
+     ((pmpcfg0 >> 8) & 0x94) == (0x93 & 0x94): 23
+     ((pmpcfg0 >> 8) & 0x92) == (0x93 & 0x92): 23
+     ((pmpcfg0 >> 8) & 0x91) == (0x93 & 0x91): 23
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 25
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 25
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 25
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 37
+     csrrw: 53
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x93) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 261
+     mode == 'M' and (mcause != 7): 261
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_rx</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x94) == (0x95 & 0x94): 26
+     ((pmpcfg0 >> 24) & 0x92) == (0x95 & 0x92): 26
+     ((pmpcfg0 >> 24) & 0x91) == (0x95 & 0x91): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 27
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 27
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 27
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 36
+     csrrw: 51
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x95) and (rs1_val + imm_val == (pmpaddr3 << 2)): 9
+     mode == 'M' and (mcause != 1): 258
+     mode == 'M' and (mcause != 5): 258
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_rx_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 27
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 27
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 27
+     ((pmpcfg0 >> 8) & 0x94) == (0x95 & 0x94): 26
+     ((pmpcfg0 >> 8) & 0x92) == (0x95 & 0x92): 26
+     ((pmpcfg0 >> 8) & 0x91) == (0x95 & 0x91): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 28
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 28
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 28
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 37
+     csrrw: 53
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x95) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and (mcause != 5): 261
+     mode == 'M' and (mcause != 1): 261
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_x</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x94) == (0x94 & 0x94): 50
+     ((pmpcfg0 >> 24) & 0x92) == (0x94 & 0x92): 50
+     ((pmpcfg0 >> 24) & 0x91) == (0x94 & 0x91): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 51
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 51
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 51
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 70
+     csrrw: 69
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x94) and (rs1_val + imm_val == (pmpaddr3 << 2)): 9
+     mode == 'M' and (mcause != 1): 526
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_priority_x_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 51
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 51
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 51
+     ((pmpcfg0 >> 8) & 0x94) == (0x94 & 0x94): 50
+     ((pmpcfg0 >> 8) & 0x92) == (0x94 & 0x92): 50
+     ((pmpcfg0 >> 8) & 0x91) == (0x94 & 0x91): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 52
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 52
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 52
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 71
+     csrrw: 71
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x94) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and (mcause != 1): 529
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_r</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 8) & 0x94) == (0x91 & 0x94): 36
+     ((pmpcfg0 >> 8) & 0x92) == (0x91 & 0x92): 36
+     ((pmpcfg0 >> 8) & 0x91) == (0x91 & 0x91): 36
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 53
+     csrrw: 62
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x91) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 394
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NA4_rw</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 8) & 0x94) == (0x93 & 0x94): 24
+     ((pmpcfg0 >> 8) & 0x92) == (0x93 & 0x92): 24
+     ((pmpcfg0 >> 8) & 0x91) == (0x93 & 0x91): 24
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
      csrrs: 36
      csrrw: 53
@@ -4698,16 +5356,25 @@ mnemonics:
      sw: 67
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 8) & 0x9F == 0x93) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
-     coverage: 1/1
-total_coverage: 17/17
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x93) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 260
+     mode == 'M' and (mcause != 7): 260
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_NA4_RWX</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NA4_rwx</td>
+          <td class="col-result">23/23</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -4718,19 +5385,16 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 34
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 34
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 34
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 43
-     ((pmpcfg0 >> 8) & 0x99) == 0x91: 26
-     ((pmpcfg0 >> 8) & 0x9A) == 0x92: 26
-     ((pmpcfg0 >> 8) & 0x9C) == 0x94: 26
-     (read_csr("mcause") != 0x00000001): 43
-     (read_csr("mcause") != 0x00000005): 43
-     (read_csr("mcause") != 0x00000007): 43
-     coverage: 12/12
+     ((pmpcfg0 >> 8) & 0x94) == (0x97 & 0x94): 15
+     ((pmpcfg0 >> 8) & 0x92) == (0x97 & 0x92): 15
+     ((pmpcfg0 >> 8) & 0x91) == (0x97 & 0x91): 15
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
      csrrs: 19
      csrrw: 24
@@ -4738,16 +5402,25 @@ mnemonics:
      sw: 31
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 8) & 0x9F == 0x97) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
-     coverage: 1/1
-total_coverage: 17/17
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x97) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and (mcause != 1): 106
+     mode == 'M' and (mcause != 5): 106
+     mode == 'M' and (mcause != 7): 106
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_NA4_RX</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NA4_rx</td>
+          <td class="col-result">23/23</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -4758,371 +5431,42 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 44
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 44
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 19
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 72
-     ((pmpcfg0 >> 8) & 0x99) == 0x91: 55
-     ((pmpcfg0 >> 8) & 0x9A) == 0x90: 55
-     ((pmpcfg0 >> 8) & 0x9C) == 0x94: 55
-     (read_csr("mcause") != 0x00000001): 72
-     (read_csr("mcause") != 0x00000005): 72
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
+     ((pmpcfg0 >> 8) & 0x94) == (0x95 & 0x94): 27
+     ((pmpcfg0 >> 8) & 0x92) == (0x95 & 0x92): 27
+     ((pmpcfg0 >> 8) & 0x91) == (0x95 & 0x91): 27
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
      csrrs: 36
-     csrrw: 33
-     lw: 107
-     sw: 67
-     coverage: 4/4
-val_comb:
-     ((pmpcfg0 >> 8) & 0x9F == 0x95) and (rs1_val + imm_val == (pmpaddr1 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NA4_X</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 54
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 101
-     ((pmpcfg0 >> 8) & 0x99) == 0x90: 84
-     ((pmpcfg0 >> 8) & 0x9A) == 0x90: 84
-     ((pmpcfg0 >> 8) & 0x9C) == 0x94: 84
-     (read_csr("mcause") != 0x00000001): 101
-     (read_csr("mcause") == 0x00000005): 3
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
-mnemonics:
-     csrrs: 53
-     csrrw: 42
-     lw: 179
-     sw: 103
-     coverage: 4/4
-val_comb:
-     ((pmpcfg0 >> 8) & 0x9F == 0x94) and (rs1_val + imm_val == (pmpaddr1 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NAPOT_R</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 96
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 6
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 19
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 124
-     ((pmpcfg0 >> 8) & 0x99) == 0x99: 107
-     ((pmpcfg0 >> 8) & 0x9A) == 0x98: 107
-     ((pmpcfg0 >> 8) & 0x9C) == 0x98: 107
-     (read_csr("mcause") != 0x00000005): 124
-     (read_csr("mcause") == 0x00000001): 6
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
-mnemonics:
-     csrrs: 70
-     csrrw: 51
-     lw: 251
-     sw: 139
-     coverage: 4/4
-val_comb:
-     ? ((pmpcfg0 >> 8) & 0x9F == 0x99) and (rs1_val + imm_val >= (pmpaddr1 << 2))
-          and (rs1_val + imm_val < ((((((pmpaddr1 << 2) | 3) + 1) | (((pmpaddr1 <<
-          2) | 3))) + 1)))
-     : 6
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NAPOT_RW</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 86
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 86
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 6
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 95
-     ((pmpcfg0 >> 8) & 0x99) == 0x99: 78
-     ((pmpcfg0 >> 8) & 0x9A) == 0x9A: 78
-     ((pmpcfg0 >> 8) & 0x9C) == 0x98: 78
-     (read_csr("mcause") != 0x00000005): 95
-     (read_csr("mcause") != 0x00000007): 95
-     (read_csr("mcause") == 0x00000001): 6
-     coverage: 12/12
-mnemonics:
-     csrrs: 53
-     csrrw: 42
-     lw: 182
-     sw: 103
-     coverage: 4/4
-val_comb:
-     ? ((pmpcfg0 >> 8) & 0x9F == 0x9B) and (rs1_val + imm_val >= (pmpaddr1 << 2))
-          and (rs1_val + imm_val < ((((((pmpaddr1 << 2) | 3) + 1) | (((pmpaddr1 <<
-          2) | 3))) + 1)))
-     : 9
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NAPOT_RWX</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 34
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 34
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 34
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 43
-     ((pmpcfg0 >> 8) & 0x99) == 0x99: 26
-     ((pmpcfg0 >> 8) & 0x9A) == 0x9A: 26
-     ((pmpcfg0 >> 8) & 0x9C) == 0x9C: 26
-     (read_csr("mcause") != 0x00000001): 43
-     (read_csr("mcause") != 0x00000005): 43
-     (read_csr("mcause") != 0x00000007): 43
-     coverage: 12/12
-mnemonics:
-     csrrs: 19
-     csrrw: 24
-     lw: 38
-     sw: 31
-     coverage: 4/4
-val_comb:
-     ? ((pmpcfg0 >> 8) & 0x9F == 0x9F) and (rs1_val + imm_val >= (pmpaddr1 << 2))
-          and (rs1_val + imm_val < ((((((pmpaddr1 << 2) | 3) + 1) | (((pmpaddr1 <<
-          2) | 3))) + 1)))
-     : 9
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NAPOT_RX</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 72
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 72
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 2
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 20
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 110
-     ((pmpcfg0 >> 8) & 0x99) == 0x99: 74
-     ((pmpcfg0 >> 8) & 0x9A) == 0x98: 74
-     ((pmpcfg0 >> 8) & 0x9C) == 0x9C: 74
-     (read_csr("mcause") != 0x00000001): 110
-     (read_csr("mcause") != 0x00000005): 110
-     (read_csr("mcause") == 0x00000007): 5
-     coverage: 12/12
-mnemonics:
-     csrrs: 46
-     csrrw: 59
-     lw: 160
-     sw: 109
-     coverage: 4/4
-val_comb:
-     ? ((pmpcfg0 >> 8) & 0x9F == 0x9D) and (rs1_val + imm_val >= (pmpaddr1 << 2))
-          and (rs1_val + imm_val < ((((((pmpaddr1 << 2) | 3) + 1) | (((pmpaddr1 <<
-          2) | 3))) + 1)))
-     : 5
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_NAPOT_X</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 54
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr1) >= 0x00000000) and ((pmpaddr1) <= 0xFFFFFFFF): 101
-     ((pmpcfg0 >> 8) & 0x99) == 0x98: 84
-     ((pmpcfg0 >> 8) & 0x9A) == 0x98: 84
-     ((pmpcfg0 >> 8) & 0x9C) == 0x9C: 84
-     (read_csr("mcause") != 0x00000001): 101
-     (read_csr("mcause") == 0x00000005): 3
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
-mnemonics:
-     csrrs: 53
-     csrrw: 42
-     lw: 179
-     sw: 103
-     coverage: 4/4
-val_comb:
-     ? ((pmpcfg0 >> 8) & 0x9F == 0x9C) and (rs1_val + imm_val >= (pmpaddr1 << 2))
-          and (rs1_val + imm_val < ((((((pmpaddr1 << 2) | 3) + 1) | (((pmpaddr1 <<
-          2) | 3))) + 1)))
-     : 6
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_TOR_R</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 71
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 3
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 19
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr2) >= 0x00000000) and ((pmpaddr2) <= 0xFFFFFFFF): 99
-     ((pmpcfg0 >> 16) & 0x99) == 0x89: 81
-     ((pmpcfg0 >> 16) & 0x9A) == 0x88: 81
-     ((pmpcfg0 >> 16) & 0x9C) == 0x88: 81
-     (read_csr("mcause") != 0x00000005): 99
-     (read_csr("mcause") == 0x00000001): 3
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
-mnemonics:
-     csrrs: 53
-     csrrw: 43
-     lw: 179
-     sw: 103
-     coverage: 4/4
-val_comb:
-     ((pmpcfg0 >> 16) & 0x9F == 0x89) and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < (pmpaddr2 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
-</br></div></td>
-        </tr></tbody>
-        
-        <tbody class= "  results-table-row" >
-        <tr>
-          <td class="col-name">pmp_TOR_RW</td>
-          <td class="col-result">17/17</td>
-          <td class="col-percentage">100.00%
-            <div class="meter">
-              <span style="width: 100.00%"></span>
-            </div>
-          </td>          
-        <tr>
-          <td class="extra" colspan="2">
-          <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
-csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 61
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 61
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000001): 3
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr2) >= 0x00000000) and ((pmpaddr2) <= 0xFFFFFFFF): 70
-     ((pmpcfg0 >> 16) & 0x99) == 0x89: 52
-     ((pmpcfg0 >> 16) & 0x9A) == 0x8A: 52
-     ((pmpcfg0 >> 16) & 0x9C) == 0x88: 52
-     (read_csr("mcause") != 0x00000005): 70
-     (read_csr("mcause") != 0x00000007): 70
-     (read_csr("mcause") == 0x00000001): 3
-     coverage: 12/12
-mnemonics:
-     csrrs: 36
-     csrrw: 34
+     csrrw: 53
      lw: 110
      sw: 67
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 16) & 0x9F == 0x8B) and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < (pmpaddr2 << 2)): 9
-     coverage: 1/1
-total_coverage: 17/17
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x95) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and (mcause != 1): 260
+     mode == 'M' and (mcause != 5): 260
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 23/23
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_TOR_RWX</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NA4_x</td>
+          <td class="col-result">23/23</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -5133,36 +5477,617 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 35
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 35
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000007): 35
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 9
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000007): 9
-     ((pmpaddr2) >= 0x00000000) and ((pmpaddr2) <= 0xFFFFFFFF): 44
-     ((pmpcfg0 >> 16) & 0x99) == 0x89: 26
-     ((pmpcfg0 >> 16) & 0x9A) == 0x8A: 26
-     ((pmpcfg0 >> 16) & 0x9C) == 0x8C: 26
-     (read_csr("mcause") != 0x00000001): 44
-     (read_csr("mcause") != 0x00000005): 44
-     (read_csr("mcause") != 0x00000007): 44
-     coverage: 12/12
+     ((pmpcfg0 >> 8) & 0x94) == (0x94 & 0x94): 51
+     ((pmpcfg0 >> 8) & 0x92) == (0x94 & 0x92): 51
+     ((pmpcfg0 >> 8) & 0x91) == (0x94 & 0x91): 51
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 70
+     csrrw: 71
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x94) and (rs1_val + imm_val == (pmpaddr1 << 2)): 9
+     mode == 'M' and (mcause != 1): 528
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_r</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x9C) == (0x99 & 0x9C): 44
+     ((pmpcfg0 >> 24) & 0x9A) == (0x99 & 0x9A): 44
+     ((pmpcfg0 >> 24) & 0x99) == (0x99 & 0x99): 44
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 45
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 45
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 45
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 70
+     csrrw: 69
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x99)
+          and (rs1_val + imm_val >= (pmpaddr3 << 2)) and (rs1_val + imm_val < ((((((pmpaddr3
+          << 2) | 3) + 1) | (((pmpaddr3 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 526
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_r_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 45
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 45
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 45
+     ((pmpcfg0 >> 8) & 0x9C) == (0x99 & 0x9C): 44
+     ((pmpcfg0 >> 8) & 0x9A) == (0x99 & 0x9A): 44
+     ((pmpcfg0 >> 8) & 0x99) == (0x99 & 0x99): 44
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 46
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 46
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 46
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 71
+     csrrw: 71
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x99)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 529
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_rw</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x9C) == (0x9B & 0x9C): 32
+     ((pmpcfg0 >> 24) & 0x9A) == (0x9B & 0x9A): 32
+     ((pmpcfg0 >> 24) & 0x99) == (0x9B & 0x99): 32
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 33
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 33
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 33
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 53
+     csrrw: 60
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x9B)
+          and (rs1_val + imm_val >= (pmpaddr3 << 2)) and (rs1_val + imm_val < ((((((pmpaddr3
+          << 2) | 3) + 1) | (((pmpaddr3 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 392
+     mode == 'M' and (mcause != 7): 392
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_rw_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 33
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 33
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 33
+     ((pmpcfg0 >> 8) & 0x9C) == (0x9B & 0x9C): 32
+     ((pmpcfg0 >> 8) & 0x9A) == (0x9B & 0x9A): 32
+     ((pmpcfg0 >> 8) & 0x99) == (0x9B & 0x99): 32
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 34
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 34
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 34
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 54
+     csrrw: 62
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9B)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 395
+     mode == 'M' and (mcause != 7): 395
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_rx</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x9C) == (0x9D & 0x9C): 26
+     ((pmpcfg0 >> 24) & 0x9A) == (0x9D & 0x9A): 26
+     ((pmpcfg0 >> 24) & 0x99) == (0x9D & 0x99): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 27
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 27
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 27
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 36
+     csrrw: 51
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x9D)
+          and (rs1_val + imm_val >= (pmpaddr3 << 2)) and (rs1_val + imm_val < ((((((pmpaddr3
+          << 2) | 3) + 1) | (((pmpaddr3 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 258
+     mode == 'M' and (mcause != 5): 258
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_rx_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 27
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 27
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 27
+     ((pmpcfg0 >> 8) & 0x9C) == (0x9D & 0x9C): 26
+     ((pmpcfg0 >> 8) & 0x9A) == (0x9D & 0x9A): 26
+     ((pmpcfg0 >> 8) & 0x99) == (0x9D & 0x99): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 28
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 28
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 28
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 37
+     csrrw: 53
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9D)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 261
+     mode == 'M' and (mcause != 5): 261
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_x</td>
+          <td class="col-result">25/25</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x9C) == (0x9C & 0x9C): 50
+     ((pmpcfg0 >> 24) & 0x9A) == (0x9C & 0x9A): 50
+     ((pmpcfg0 >> 24) & 0x99) == (0x9C & 0x99): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 51
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 51
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 51
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 11/11
+mnemonics:
+     csrrs: 70
+     csrrw: 69
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x9C)
+          and (rs1_val + imm_val >= (pmpaddr3 << 2)) and (rs1_val + imm_val < ((((((pmpaddr3
+          << 2) | 3) + 1) | (((pmpaddr3 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 526
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 25/25
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_priority_x_level_2</td>
+          <td class="col-result">30/30</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 51
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 51
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 51
+     ((pmpcfg0 >> 8) & 0x9C) == (0x9C & 0x9C): 50
+     ((pmpcfg0 >> 8) & 0x9A) == (0x9C & 0x9A): 50
+     ((pmpcfg0 >> 8) & 0x99) == (0x9C & 0x99): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 52
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 52
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 52
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 16/16
+mnemonics:
+     csrrs: 71
+     csrrw: 71
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9C)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 529
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 30/30
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_r</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 8) & 0x99) == (0xF9 & 0x99): 45
+     ((pmpcfg0 >> 8) & 0x9A) == (0xF9 & 0x9A): 45
+     ((pmpcfg0 >> 8) & 0x9C) == (0xF9 & 0x9C): 45
+     pmpaddr0 != 0 and ((old("pmpaddr0")) ^ (pmpaddr0) != 0x00): 1
+     pmpaddr1 != 0 and ((old("pmpaddr1")) ^ (pmpaddr1) != 0x00): 1
+     pmpaddr2 != 0 and ((old("pmpaddr2")) ^ (pmpaddr2) != 0x00): 1
+     pmpaddr3 != 0 and ((old("pmpaddr3")) ^ (pmpaddr3) != 0x00): 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 70
+     csrrw: 71
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x99)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 528
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_rw</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 8) & 0x99) == (0xFB & 0x99): 33
+     ((pmpcfg0 >> 8) & 0x9A) == (0xFB & 0x9A): 33
+     ((pmpcfg0 >> 8) & 0x9C) == (0xFB & 0x9C): 33
+     pmpaddr0 != 0 and ((old("pmpaddr0")) ^ (pmpaddr0) != 0x00): 1
+     pmpaddr1 != 0 and ((old("pmpaddr1")) ^ (pmpaddr1) != 0x00): 1
+     pmpaddr2 != 0 and ((old("pmpaddr2")) ^ (pmpaddr2) != 0x00): 1
+     pmpaddr3 != 0 and ((old("pmpaddr3")) ^ (pmpaddr3) != 0x00): 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 53
+     csrrw: 62
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9B)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 93
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 90
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 90
+     mode == 'M' and (mcause != 5): 394
+     mode == 'M' and (mcause != 7): 394
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_NAPOT_rwx</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 8) & 0x9C) == (0xFF & 0x9C): 15
+     ((pmpcfg0 >> 8) & 0x9A) == (0xFF & 0x9A): 15
+     ((pmpcfg0 >> 8) & 0x99) == (0xFF & 0x99): 15
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
      csrrs: 19
-     csrrw: 25
+     csrrw: 44
      lw: 38
      sw: 31
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 16) & 0x9F == 0x8F) and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < (pmpaddr2 << 2)): 9
-     coverage: 1/1
-total_coverage: 17/17
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9F)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 126
+     mode == 'M' and (mcause != 5): 126
+     mode == 'M' and (mcause != 7): 126
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_TOR_RX</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NAPOT_rx</td>
+          <td class="col-result">21/21</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -5173,36 +6098,43 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 45
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000005): 45
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") != 0x00000005): 19
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr2) >= 0x00000000) and ((pmpaddr2) <= 0xFFFFFFFF): 73
-     ((pmpcfg0 >> 16) & 0x99) == 0x89: 55
-     ((pmpcfg0 >> 16) & 0x9A) == 0x88: 55
-     ((pmpcfg0 >> 16) & 0x9C) == 0x8C: 55
-     (read_csr("mcause") != 0x00000001): 73
-     (read_csr("mcause") != 0x00000005): 73
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
+     ((pmpcfg0 >> 8) & 0x99) == (0xFD & 0x99): 27
+     ((pmpcfg0 >> 8) & 0x9A) == (0xFD & 0x9A): 27
+     ((pmpcfg0 >> 8) & 0x9C) == (0xFD & 0x9C): 27
+     pmpaddr0 != 0 and ((old("pmpaddr0")) ^ (pmpaddr0) != 0x00): 1
+     pmpaddr1 != 0 and ((old("pmpaddr1")) ^ (pmpaddr1) != 0x00): 1
+     pmpaddr2 != 0 and ((old("pmpaddr2")) ^ (pmpaddr2) != 0x00): 1
+     pmpaddr3 != 0 and ((old("pmpaddr3")) ^ (pmpaddr3) != 0x00): 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
      csrrs: 36
-     csrrw: 34
-     lw: 107
+     csrrw: 53
+     lw: 110
      sw: 67
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 16) & 0x9F == 0x8D) and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < (pmpaddr2 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9D)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause == 7): 141
+     mode == 'M' and (mcause != 1): 260
+     mode == 'M' and (mcause != 5): 260
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     coverage: 8/8
+total_coverage: 21/21
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_TOR_X</td>
-          <td class="col-result">17/17</td>
+          <td class="col-name">PMP_NAPOT_x</td>
+          <td class="col-result">23/23</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -5213,36 +6145,45 @@ total_coverage: 17/17
           <div class="log">config:
    - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") != 0x00000001): 55
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x000) and read_csr("mcause") == 0x00000007): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000005): 1
-     ((mstatus & 0x1800 == 0x800) and read_csr("mcause") == 0x00000007): 1
-     ((pmpaddr2) >= 0x00000000) and ((pmpaddr2) <= 0xFFFFFFFF): 102
-     ((pmpcfg0 >> 16) & 0x99) == 0x88: 84
-     ((pmpcfg0 >> 16) & 0x9A) == 0x88: 84
-     ((pmpcfg0 >> 16) & 0x9C) == 0x8C: 84
-     (read_csr("mcause") != 0x00000001): 102
-     (read_csr("mcause") == 0x00000005): 3
-     (read_csr("mcause") == 0x00000007): 3
-     coverage: 12/12
+     ((pmpcfg0 >> 8) & 0x99) == (0xFC & 0x99): 51
+     ((pmpcfg0 >> 8) & 0x9A) == (0xFC & 0x9A): 51
+     ((pmpcfg0 >> 8) & 0x9C) == (0xFC & 0x9C): 51
+     pmpaddr0 != 0 and ((old("pmpaddr0")) ^ (pmpaddr0) != 0x00): 1
+     pmpaddr1 != 0 and ((old("pmpaddr1")) ^ (pmpaddr1) != 0x00): 1
+     pmpaddr2 != 0 and ((old("pmpaddr2")) ^ (pmpaddr2) != 0x00): 1
+     pmpaddr3 != 0 and ((old("pmpaddr3")) ^ (pmpaddr3) != 0x00): 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
 mnemonics:
-     csrrs: 53
-     csrrw: 43
-     lw: 179
-     sw: 103
+     csrrs: 70
+     csrrw: 71
+     lw: 254
+     sw: 139
      coverage: 4/4
 val_comb:
-     ((pmpcfg0 >> 16) & 0x9F == 0x8C) and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < (pmpaddr2 << 2)): 6
-     coverage: 1/1
-total_coverage: 17/17
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x9C)
+          and (rs1_val + imm_val >= (pmpaddr1 << 2)) and (rs1_val + imm_val < ((((((pmpaddr1
+          << 2) | 3) + 1) | (((pmpaddr1 << 2) | 3))) + 1)))
+     : 9
+     mode == 'M' and (mcause != 1): 528
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 23/23
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
-          <td class="col-name">pmp_access_permission</td>
-          <td class="col-result">7/7</td>
+          <td class="col-name">PMP_TOR_priority_r</td>
+          <td class="col-result">26/26</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -5251,26 +6192,787 @@ total_coverage: 17/17
         <tr>
           <td class="extra" colspan="2">
           <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     (mstatus & 0x1800 != 0x0800) and ((old("pmpaddr0")) ^ (pmpaddr0) != 0x00): 1
-     (mstatus & 0x1800 != 0x0800) and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
-     mstatus   &  0x1800 == 0x000 and (read_csr("mcause") == 0x00000002): 2
-     mstatus   &  0x1800 == 0x800 and (read_csr("mcause") == 0x00000002): 2
-     coverage: 4/4
+     ((pmpcfg0 >> 24) & 0x8C) == (0x89 & 0x8C): 35
+     ((pmpcfg0 >> 24) & 0x8A) == (0x89 & 0x8A): 35
+     ((pmpcfg0 >> 24) & 0x89) == (0x89 & 0x89): 35
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 36
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 36
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 36
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 12/12
 mnemonics:
-     csrrs: 65
+     csrrs: 53
+     csrrw: 61
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x89)
+          and (rs1_val + imm_val >= (pmpaddr2 << 2)) and (rs1_val + imm_val < (pmpaddr3
+          << 2))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 393
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 26/26
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_r_level_2</td>
+          <td class="col-result">31/31</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 36
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 36
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 36
+     ((pmpcfg0 >> 8) & 0x8C) == (0x89 & 0x8C): 35
+     ((pmpcfg0 >> 8) & 0x8A) == (0x89 & 0x8A): 35
+     ((pmpcfg0 >> 8) & 0x89) == (0x89 & 0x89): 35
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 37
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 37
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 37
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 17/17
+mnemonics:
+     csrrs: 54
+     csrrw: 63
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x89)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr1
+          << 2))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 396
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 31/31
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_rw</td>
+          <td class="col-result">26/26</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x8B & 0x8C): 23
+     ((pmpcfg0 >> 24) & 0x8A) == (0x8B & 0x8A): 23
+     ((pmpcfg0 >> 24) & 0x89) == (0x8B & 0x89): 23
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 24
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 24
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 24
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 12/12
+mnemonics:
+     csrrs: 36
+     csrrw: 52
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x8B)
+          and (rs1_val + imm_val >= (pmpaddr2 << 2)) and (rs1_val + imm_val < (pmpaddr3
+          << 2))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 259
+     mode == 'M' and (mcause != 7): 259
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 26/26
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_rw_level_2</td>
+          <td class="col-result">31/31</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 24
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 24
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 24
+     ((pmpcfg0 >> 8) & 0x8C) == (0x8B & 0x8C): 23
+     ((pmpcfg0 >> 8) & 0x8A) == (0x8B & 0x8A): 23
+     ((pmpcfg0 >> 8) & 0x89) == (0x8B & 0x89): 23
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 25
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 25
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 25
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 17/17
+mnemonics:
+     csrrs: 37
+     csrrw: 54
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x8B)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr1
+          << 2))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 262
+     mode == 'M' and (mcause != 7): 262
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 31/31
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_rwx_level_2</td>
+          <td class="col-result">31/31</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 15
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 15
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 15
+     ((pmpcfg0 >> 8) & 0x8C) == (0x8F & 0x8C): 14
+     ((pmpcfg0 >> 8) & 0x8A) == (0x8F & 0x8A): 14
+     ((pmpcfg0 >> 8) & 0x89) == (0x8F & 0x89): 14
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 16
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 16
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 16
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 17/17
+mnemonics:
+     csrrs: 20
+     csrrw: 45
+     lw: 38
+     sw: 31
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x8F)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr1
+          << 2))
+     : 9
+     mode == 'M' and (mcause != 5): 128
+     mode == 'M' and (mcause != 1): 128
+     mode == 'M' and (mcause != 7): 128
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 31/31
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_rx</td>
+          <td class="col-result">26/26</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x8D & 0x8C): 26
+     ((pmpcfg0 >> 24) & 0x8A) == (0x8D & 0x8A): 26
+     ((pmpcfg0 >> 24) & 0x89) == (0x8D & 0x89): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 27
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 27
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 27
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 12/12
+mnemonics:
+     csrrs: 36
+     csrrw: 52
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x8D)
+          and (rs1_val + imm_val >= (pmpaddr2 << 2)) and (rs1_val + imm_val < (pmpaddr3
+          << 2))
+     : 9
+     mode == 'M' and (mcause != 1): 259
+     mode == 'M' and (mcause != 5): 259
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 26/26
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_rx_level_2</td>
+          <td class="col-result">31/31</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 27
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 27
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 27
+     ((pmpcfg0 >> 8) & 0x8C) == (0x8D & 0x8C): 26
+     ((pmpcfg0 >> 8) & 0x8A) == (0x8D & 0x8A): 26
+     ((pmpcfg0 >> 8) & 0x89) == (0x8D & 0x89): 26
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 28
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 28
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 28
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 17/17
+mnemonics:
+     csrrs: 37
+     csrrw: 54
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x8D)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr1
+          << 2))
+     : 9
+     mode == 'M' and (mcause != 5): 262
+     mode == 'M' and (mcause != 1): 262
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 31/31
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_x</td>
+          <td class="col-result">26/26</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x8C & 0x8C): 50
+     ((pmpcfg0 >> 24) & 0x8A) == (0x8C & 0x8A): 50
+     ((pmpcfg0 >> 24) & 0x89) == (0x8C & 0x89): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 51
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 51
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 51
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 12/12
+mnemonics:
+     csrrs: 70
+     csrrw: 70
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 24) & 0x9F == 0x8C)
+          and (rs1_val + imm_val >= (pmpaddr2 << 2)) and (rs1_val + imm_val < (pmpaddr3
+          << 2))
+     : 9
+     mode == 'M' and (mcause != 1): 527
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 26/26
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_priority_x_level_2</td>
+          <td class="col-result">31/31</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 24) & 0x8C) == (0x88 & 0x8C): 51
+     ((pmpcfg0 >> 24) & 0x8A) == (0x88 & 0x8A): 51
+     ((pmpcfg0 >> 24) & 0x89) == (0x88 & 0x89): 51
+     ((pmpcfg0 >> 8) & 0x8C) == (0x8C & 0x8C): 50
+     ((pmpcfg0 >> 8) & 0x8A) == (0x8C & 0x8A): 50
+     ((pmpcfg0 >> 8) & 0x89) == (0x8C & 0x89): 50
+     ((pmpcfg3 >> 24) & 0x8C) == (0x8F & 0x8C): 52
+     ((pmpcfg3 >> 24) & 0x8A) == (0x8F & 0x8A): 52
+     ((pmpcfg3 >> 24) & 0x89) == (0x8F & 0x89): 52
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     (old("pmpaddr14")) ^ (pmpaddr14) != 0x00: 1
+     (old("pmpaddr15")) ^ (pmpaddr15) != 0x00: 1
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 2
+     pmpcfg3 != 0 and ((old("pmpcfg3")) ^ (pmpcfg3) != 0x00): 1
+     coverage: 17/17
+mnemonics:
+     csrrs: 71
+     csrrw: 72
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and ((pmpcfg0 >> 8) & 0x9F == 0x8C)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr1
+          << 2))
+     : 9
+     mode == 'M' and (mcause != 1): 530
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 31/31
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_r</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 16) & 0x8C) == (0x89 & 0x8C): 36
+     ((pmpcfg0 >> 16) & 0x8A) == (0x89 & 0x8A): 36
+     ((pmpcfg0 >> 16) & 0x89) == (0x89 & 0x89): 36
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 53
+     csrrw: 63
+     lw: 182
+     sw: 103
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and (((pmpcfg0 >> 16) & 0x9F == 0x89)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr2
+          << 2)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 395
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 136
+     mode == 'S' and (mcause == 7): 2
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_rw</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 16) & 0x9C) == (0x8B & 0x9C): 24
+     ((pmpcfg0 >> 16) & 0x9A) == (0x8B & 0x9A): 24
+     ((pmpcfg0 >> 16) & 0x99) == (0x8B & 0x99): 24
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 36
+     csrrw: 54
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and (((pmpcfg0 >> 16) & 0x9F == 0x8B)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr2
+          << 2)))
+     : 9
+     mode == 'M' and mode_change == 'M to M' and (mcause == 1): 49
+     mode == 'M' and mode_change == 'U to M' and (mcause == 1): 45
+     mode == 'M' and mode_change == 'S to M' and (mcause == 1): 45
+     mode == 'M' and (mcause != 5): 261
+     mode == 'M' and (mcause != 7): 261
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_rwx</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 16) & 0x9C) == (0x8F & 0x9C): 15
+     ((pmpcfg0 >> 16) & 0x9A) == (0x8F & 0x9A): 15
+     ((pmpcfg0 >> 16) & 0x99) == (0x8F & 0x99): 15
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 19
+     csrrw: 45
+     lw: 38
+     sw: 31
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and (((pmpcfg0 >> 16) & 0x9F == 0x8F)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr2
+          << 2)))
+     : 9
+     mode == 'M' and (mcause != 1): 127
+     mode == 'M' and (mcause != 5): 127
+     mode == 'M' and (mcause != 7): 127
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'S' and (mcause != 7): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'U' and (mcause != 7): 3
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_rx</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 16) & 0x8C) == (0x8D & 0x8C): 27
+     ((pmpcfg0 >> 16) & 0x8A) == (0x8D & 0x8A): 27
+     ((pmpcfg0 >> 16) & 0x89) == (0x8D & 0x89): 27
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 36
+     csrrw: 54
+     lw: 110
+     sw: 67
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and (((pmpcfg0 >> 16) & 0x9F == 0x8D)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr2
+          << 2)))
+     : 9
+     mode == 'M' and (mcause != 1): 261
+     mode == 'M' and (mcause != 5): 261
+     mode == 'S' and (mcause != 1): 3
+     mode == 'S' and (mcause != 5): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'U' and (mcause != 5): 3
+     mode == 'M' and (mcause == 7): 141
+     mode == 'S' and (mcause == 7): 3
+     mode == 'U' and (mcause == 7): 2
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_TOR_x</td>
+          <td class="col-result">23/23</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     ((pmpcfg0 >> 16) & 0x8C) == (0x8C & 0x8C): 51
+     ((pmpcfg0 >> 16) & 0x8A) == (0x8C & 0x8A): 51
+     ((pmpcfg0 >> 16) & 0x89) == (0x8C & 0x89): 51
+     (old("pmpaddr0")) ^ (pmpaddr0) != 0x00: 1
+     (old("pmpaddr1")) ^ (pmpaddr1) != 0x00: 1
+     (old("pmpaddr2")) ^ (pmpaddr2) != 0x00: 1
+     (old("pmpaddr3")) ^ (pmpaddr3) != 0x00: 1
+     pmpcfg0 != 0 and ((old("pmpcfg0")) ^ (pmpcfg0) != 0x00): 1
+     pmpcfg1 != 0 and ((old("pmpcfg1")) ^ (pmpcfg1) != 0x00): 1
+     coverage: 9/9
+mnemonics:
+     csrrs: 70
+     csrrw: 72
+     lw: 254
+     sw: 139
+     coverage: 4/4
+val_comb:
+     ? (mnemonic == "lw" or mnemonic == "sw") and (((pmpcfg0 >> 16) & 0x9F == 0x8C)
+          and (rs1_val + imm_val >= (pmpaddr0 << 2)) and (rs1_val + imm_val < (pmpaddr2
+          << 2)))
+     : 9
+     mode == 'M' and (mcause != 1): 529
+     mode == 'S' and (mcause != 1): 3
+     mode == 'U' and (mcause != 1): 3
+     mode == 'M' and (mcause == 5): 275
+     mode == 'M' and (mcause == 7): 135
+     mode == 'S' and (mcause == 5): 2
+     mode == 'S' and (mcause == 7): 1
+     mode == 'U' and (mcause == 5): 2
+     mode == 'U' and (mcause == 7): 1
+     coverage: 10/10
+total_coverage: 23/23
+</br></div></td>
+        </tr></tbody>
+        
+        <tbody class= "  results-table-row" >
+        <tr>
+          <td class="col-name">PMP_access_permission</td>
+          <td class="col-result">28/28</td>
+          <td class="col-percentage">100.00%
+            <div class="meter">
+              <span style="width: 100.00%"></span>
+            </div>
+          </td>          
+        <tr>
+          <td class="extra" colspan="2">
+          <div class="log">config:
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
+csr_comb:
+     mode == 'M' and (((old("pmpaddr0") ^ (pmpaddr0)) != 0x00) and pmpaddr0 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr1") ^ (pmpaddr1)) != 0x00) and pmpaddr1 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr2") ^ (pmpaddr2)) != 0x00) and pmpaddr2 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr3") ^ (pmpaddr3)) != 0x00) and pmpaddr3 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr4") ^ (pmpaddr4)) != 0x00) and pmpaddr4 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr5") ^ (pmpaddr5)) != 0x00) and pmpaddr5 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr6") ^ (pmpaddr6)) != 0x00) and pmpaddr6 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr7") ^ (pmpaddr7)) != 0x00) and pmpaddr7 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr8") ^ (pmpaddr8)) != 0x00) and pmpaddr8 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr9") ^ (pmpaddr9)) != 0x00) and pmpaddr9 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr10") ^ (pmpaddr10)) != 0x00) and pmpaddr10 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr11") ^ (pmpaddr11)) != 0x00) and pmpaddr11 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr12") ^ (pmpaddr12)) != 0x00) and pmpaddr12 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr13") ^ (pmpaddr13)) != 0x00) and pmpaddr13 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr14") ^ (pmpaddr14)) != 0x00) and pmpaddr14 != 0x0): 1
+     mode == 'M' and (((old("pmpaddr15") ^ (pmpaddr15)) != 0x00) and pmpaddr15 != 0x0): 1
+     mode == 'M' and (((old("pmpcfg0") ^ (pmpcfg0)) != 0x00) and pmpcfg0 != 0x0): 2
+     mode == 'M' and (((old("pmpcfg1") ^ (pmpcfg1)) != 0x00) and pmpcfg1 != 0x0): 1
+     mode == 'M' and (((old("pmpcfg2") ^ (pmpcfg2)) != 0x00) and pmpcfg2 != 0x0): 1
+     mode == 'M' and (((old("pmpcfg3") ^ (pmpcfg3)) != 0x00) and pmpcfg3 != 0x0): 1
+     coverage: 20/20
+mnemonics:
+     csrrs: 81
      csrrw: 42
+     lw: 104
      sw: 99
-     coverage: 3/3
-total_coverage: 7/7
+     coverage: 4/4
+val_comb:
+     mnemonic == "csrrs" and mode == 'S' and mcause == 2: 1
+     mnemonic == "csrrs" and mode == 'U' and mcause == 2: 1
+     mnemonic == "csrrw" and mode == 'S' and mcause == 2: 1
+     mnemonic == "csrrw" and mode == 'U' and mcause == 2: 1
+     coverage: 4/4
+total_coverage: 28/28
 </br></div></td>
         </tr></tbody>
         
         <tbody class= "  results-table-row" >
         <tr>
           <td class="col-name">pmp_cfg_locked_write_unrelated</td>
-          <td class="col-result">34/34</td>
+          <td class="col-result">36/36</td>
           <td class="col-percentage">100.00%
             <div class="meter">
               <span style="width: 100.00%"></span>
@@ -5279,46 +6981,80 @@ total_coverage: 7/7
         <tr>
           <td class="extra" colspan="2">
           <div class="log">config:
-   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*); def rvtest_mtrap_routine=True;
+   - check ISA:=regex(.*32.*); check ISA:=regex(.*I.*Zicsr.*);  def rvtest_mtrap_routine=True;
 csr_comb:
-     (pmpcfg0    & 0x80 == 0x80) and (old("pmpaddr0")) ^ (pmpaddr0) == 0x00: 60
-     (pmpcfg0    & 0x80 == 0x80) and (old("pmpcfg0") & 0xFF) ^ (pmpcfg0 & 0xFF) == 0x00: 59
-     (pmpcfg0>>16 & 0x80 == 0x80) and (old("pmpaddr2")) ^ (pmpaddr2) == 0x00: 60
-     (pmpcfg0>>16 & 0x80 == 0x80) and (old("pmpcfg0") & (0xFF<<16)) ^ (pmpcfg0 & (0xFF<<16)) == 0x00: 59
-     (pmpcfg0>>24 & 0x80 == 0x80) and (old("pmpaddr3")) ^ (pmpaddr3) == 0x00: 60
-     (pmpcfg0>>24 & 0x80 == 0x80) and (old("pmpcfg0") & (0xFF<<24)) ^ (pmpcfg0 & (0xFF<<24)) == 0x00: 59
-     (pmpcfg0>>8 & 0x80 == 0x80) and (old("pmpaddr1")) ^ (pmpaddr1) == 0x00: 60
-     (pmpcfg0>>8 & 0x80 == 0x80) and (old("pmpcfg0") & (0xFF<<8)) ^ (pmpcfg0 & (0xFF<<8)) == 0x00: 59
-     (pmpcfg1    & 0x80 == 0x80) and (old("pmpaddr4")) ^ (pmpaddr4) == 0x00: 48
-     (pmpcfg1    & 0x80 == 0x80) and (old("pmpcfg1") & 0xFF) ^ (pmpcfg1 & 0xFF) == 0x00: 47
-     (pmpcfg1>>16 & 0x80 == 0x80) and (old("pmpaddr6")) ^ (pmpaddr6) == 0x00: 48
-     (pmpcfg1>>16 & 0x80 == 0x80) and (old("pmpcfg1") & (0xFF<<16)) ^ (pmpcfg1 & (0xFF<<16)) == 0x00: 47
-     (pmpcfg1>>24 & 0x80 == 0x80) and (old("pmpaddr7")) ^ (pmpaddr7) == 0x00: 48
-     (pmpcfg1>>24 & 0x80 == 0x80) and (old("pmpcfg1") & (0xFF<<24)) ^ (pmpcfg1 & (0xFF<<24)) == 0x00: 47
-     (pmpcfg1>>8 & 0x80 == 0x80) and (old("pmpaddr5")) ^ (pmpaddr5) == 0x00: 48
-     (pmpcfg1>>8 & 0x80 == 0x80) and (old("pmpcfg1") & (0xFF<<8)) ^ (pmpcfg1 & (0xFF<<8)) == 0x00: 47
-     (pmpcfg2    & 0x80 == 0x80) and (old("pmpaddr8")) ^ (pmpaddr8) == 0x00: 36
-     (pmpcfg2    & 0x80 == 0x80) and (old("pmpcfg2") & 0xFF) ^ (pmpcfg2 & 0xFF) == 0x00: 35
-     (pmpcfg2>>16 & 0x80 == 0x80) and (old("pmpaddr10")) ^ (pmpaddr10) == 0x00: 36
-     (pmpcfg2>>16 & 0x80 == 0x80) and (old("pmpcfg2") & (0xFF<<16)) ^ (pmpcfg2 & (0xFF<<16)) == 0x00: 35
-     (pmpcfg2>>24 & 0x80 == 0x80) and (old("pmpaddr11")) ^ (pmpaddr11) == 0x00: 36
-     (pmpcfg2>>24 & 0x80 == 0x80) and (old("pmpcfg2") & (0xFF<<24)) ^ (pmpcfg2 & (0xFF<<24)) == 0x00: 35
-     (pmpcfg2>>8 & 0x80 == 0x80) and (old("pmpaddr9")) ^ (pmpaddr9) == 0x00: 36
-     (pmpcfg2>>8 & 0x80 == 0x80) and (old("pmpcfg2") & (0xFF<<8)) ^ (pmpcfg2 & (0xFF<<8)) == 0x00: 35
-     (pmpcfg3    & 0x80 == 0x80) and (old("pmpaddr12")) ^ (pmpaddr12) == 0x00: 24
-     (pmpcfg3    & 0x80 == 0x80) and (old("pmpcfg3") & 0xFF) ^ (pmpcfg3 & 0xFF) == 0x00: 23
-     (pmpcfg3>>16 & 0x80 == 0x80) and (old("pmpaddr14")) ^ (pmpaddr14) == 0x00: 24
-     (pmpcfg3>>16 & 0x80 == 0x80) and (old("pmpcfg3") & (0xFF<<16)) ^ (pmpcfg3 & (0xFF<<16)) == 0x00: 23
-     (pmpcfg3>>24 & 0x80 == 0x80) and (old("pmpaddr15")) ^ (pmpaddr15) == 0x00: 24
-     (pmpcfg3>>24 & 0x80 == 0x80) and (old("pmpcfg3") & (0xFF<<24)) ^ (pmpcfg3 & (0xFF<<24)) == 0x00: 23
-     (pmpcfg3>>8 & 0x80 == 0x80) and (old("pmpaddr13")) ^ (pmpaddr13) == 0x00: 24
-     (pmpcfg3>>8 & 0x80 == 0x80) and (old("pmpcfg3") & (0xFF<<8)) ^ (pmpcfg3 & (0xFF<<8)) == 0x00: 23
+     ((old("pmpaddr0")) ^ (pmpaddr0) == 0x00) and (pmpcfg0 >> 0 & 0x80 == 0x80): 1
+     ((old("pmpaddr1")) ^ (pmpaddr1) == 0x00) and (pmpcfg0 >> 0 & 0x80 == 0x80): 1
+     ((old("pmpaddr2")) ^ (pmpaddr2) == 0x00) and (pmpcfg0 >> 0 & 0x80 == 0x80): 1
+     ((old("pmpaddr3")) ^ (pmpaddr3) == 0x00) and (pmpcfg0 >> 0 & 0x80 == 0x80): 1
+     ((old("pmpaddr4")) ^ (pmpaddr4) == 0x00) and (pmpcfg1 >> 8 & 0x80 == 0x80): 1
+     ((old("pmpaddr5")) ^ (pmpaddr5) == 0x00) and (pmpcfg1 >> 8 & 0x80 == 0x80): 1
+     ((old("pmpaddr6")) ^ (pmpaddr6) == 0x00) and (pmpcfg1 >> 8 & 0x80 == 0x80): 1
+     ((old("pmpaddr7")) ^ (pmpaddr7) == 0x00) and (pmpcfg1 >> 8 & 0x80 == 0x80): 1
+     ((old("pmpaddr8")) ^ (pmpaddr8) == 0x00) and (pmpcfg2 >> 16 & 0x80 == 0x80): 1
+     ((old("pmpaddr9")) ^ (pmpaddr9) == 0x00) and (pmpcfg2 >> 16 & 0x80 == 0x80): 1
+     ((old("pmpaddr10")) ^ (pmpaddr10) == 0x00) and (pmpcfg2 >> 16 & 0x80 == 0x80): 1
+     ((old("pmpaddr11")) ^ (pmpaddr11) == 0x00) and (pmpcfg2 >> 16 & 0x80 == 0x80): 1
+     ((old("pmpaddr12")) ^ (pmpaddr12) == 0x00) and (pmpcfg3 >> 24 & 0x80 == 0x80): 1
+     ((old("pmpaddr13")) ^ (pmpaddr13) == 0x00) and (pmpcfg3 >> 24 & 0x80 == 0x80): 1
+     ((old("pmpaddr14")) ^ (pmpaddr14) == 0x00) and (pmpcfg3 >> 24 & 0x80 == 0x80): 1
+     ((old("pmpaddr15")) ^ (pmpaddr15) == 0x00) and (pmpcfg3 >> 24 & 0x80 == 0x80): 1
+     ? (pmpcfg0  >> 0 & 0x80 == 0x80) and ((old("pmpcfg0") & (0xFF << 0)) ^ (pmpcfg0
+          & (0xFF << 0)) == 0x00) and old("pmpcfg0") != 0
+     : 1
+     ? (pmpcfg0  >> 8 & 0x80 == 0x80) and ((old("pmpcfg0") & (0xFF << 8)) ^ (pmpcfg0
+          & (0xFF << 8)) == 0x00) and old("pmpcfg0") != 0
+     : 1
+     ? (pmpcfg0  >> 16 & 0x80 == 0x80) and ((old("pmpcfg0") & (0xFF << 16)) ^ (pmpcfg0
+          & (0xFF << 16)) == 0x00) and old("pmpcfg0") != 0
+     : 1
+     ? (pmpcfg0  >> 24 & 0x80 == 0x80) and ((old("pmpcfg0") & (0xFF << 24)) ^ (pmpcfg0
+          & (0xFF << 24)) == 0x00) and old("pmpcfg0") != 0
+     : 1
+     ? (pmpcfg1  >> 0 & 0x80 == 0x80) and ((old("pmpcfg1") & (0xFF << 0)) ^ (pmpcfg1
+          & (0xFF << 0)) == 0x00) and old("pmpcfg1") != 0
+     : 1
+     ? (pmpcfg1  >> 8 & 0x80 == 0x80) and ((old("pmpcfg1") & (0xFF << 8)) ^ (pmpcfg1
+          & (0xFF << 8)) == 0x00) and old("pmpcfg1") != 0
+     : 1
+     ? (pmpcfg1  >> 16 & 0x80 == 0x80) and ((old("pmpcfg1") & (0xFF << 16)) ^ (pmpcfg1
+          & (0xFF << 16)) == 0x00) and old("pmpcfg1") != 0
+     : 1
+     ? (pmpcfg1  >> 24 & 0x80 == 0x80) and ((old("pmpcfg1") & (0xFF << 24)) ^ (pmpcfg1
+          & (0xFF << 24)) == 0x00) and old("pmpcfg1") != 0
+     : 1
+     ? (pmpcfg2  >> 0 & 0x80 == 0x80) and ((old("pmpcfg2") & (0xFF << 0)) ^ (pmpcfg2
+          & (0xFF << 0)) == 0x00) and old("pmpcfg2") != 0
+     : 1
+     ? (pmpcfg2  >> 8 & 0x80 == 0x80) and ((old("pmpcfg2") & (0xFF << 8)) ^ (pmpcfg2
+          & (0xFF << 8)) == 0x00) and old("pmpcfg2") != 0
+     : 1
+     ? (pmpcfg2  >> 16 & 0x80 == 0x80) and ((old("pmpcfg2") & (0xFF << 16)) ^ (pmpcfg2
+          & (0xFF << 16)) == 0x00) and old("pmpcfg2") != 0
+     : 1
+     ? (pmpcfg2  >> 24 & 0x80 == 0x80) and ((old("pmpcfg2") & (0xFF << 24)) ^ (pmpcfg2
+          & (0xFF << 24)) == 0x00) and old("pmpcfg2") != 0
+     : 1
+     ? (pmpcfg3  >> 0 & 0x80 == 0x80) and ((old("pmpcfg3") & (0xFF << 0)) ^ (pmpcfg3
+          & (0xFF << 0)) == 0x00) and old("pmpcfg3") != 0
+     : 1
+     ? (pmpcfg3  >> 8 & 0x80 == 0x80) and ((old("pmpcfg3") & (0xFF << 8)) ^ (pmpcfg3
+          & (0xFF << 8)) == 0x00) and old("pmpcfg3") != 0
+     : 1
+     ? (pmpcfg3  >> 16 & 0x80 == 0x80) and ((old("pmpcfg3") & (0xFF << 16)) ^ (pmpcfg3
+          & (0xFF << 16)) == 0x00) and old("pmpcfg3") != 0
+     : 1
+     ? (pmpcfg3  >> 24 & 0x80 == 0x80) and ((old("pmpcfg3") & (0xFF << 24)) ^ (pmpcfg3
+          & (0xFF << 24)) == 0x00) and old("pmpcfg3") != 0
+     : 1
      coverage: 32/32
 mnemonics:
      csrrs: 33
      csrrw: 38
-     coverage: 2/2
-total_coverage: 34/34
+     lw: 16
+     sw: 45
+     coverage: 4/4
+total_coverage: 36/36
 </br></div></td>
         </tr></tbody>
         
